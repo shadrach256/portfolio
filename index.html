@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background: #2c3e50;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero {
+            background: #f8f9fa;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            font-size: 2.5rem;
+        }
+
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .profile-img {
+            width: 80%;
+            border-radius: 60%;
+            max-width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .drive-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .drive-list li::before {
+            content: "▹";
+            color: #2c3e50;
+            margin-right: 0.5rem;
+        }
+
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            width: 2px;
+            height: 100%;
+            background: #2c3e50;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #2c3e50;
+            border-radius: 50%;
+        }
+
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-tech {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .tech-tag {
+            background: #2c3e50;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .interest-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .interest-card i {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #2c3e50;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #3498db;
+        }
+
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            section {
+                padding: 4rem 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1 style="font-size: 3rem;">Ssozi Shadrach Victor</h1>
+        <p style="font-size: 1.5rem; color: #666;">Full Stack Developer & AI Enthusiast</p>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <img src="images/image.png" alt="Profile Picture" class="profile-img">
+            <div class="about-text">
+                <h3 style="margin-bottom: 1rem;">Innovative Developer Passionate About Solving Real-World Problems</h3>
+                <p>As a software engineering enthusiast with hands-on experience, I specialize in building
+                    responsive web applications and intelligent systems. My journey began with basic HTML pages and has
+                    evolved into full-stack development with a focus on AI integration.</p>
+
+                <ul class="drive-list">
+                    <li>Passionate about open-source contributions</li>
+                    <li>Fascinated by machine learning applications</li>
+                    <li>Committed to clean code practices</li>
+                    <li>Enthusiastic about tech education initiatives</li>
+                </ul>
+
+                <a href="cv.pdf" download class="cv-download" style="display: inline-block; margin-top: 1rem;">
+                    <button>Download CV</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">Academic Background</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>BSc Business Computing and Data Analytics</h3>
+                <p class="timeline-date">2024- to date | Victoria University</p>
+                <ul>
+                    <li>GPA: 3.8/5.0</li>
+                    <li>Coursework: Algorithms, Data Structures, AI, Web Development</li>
+                    <li>Research Assistant: Machine Learning Department</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Diploma in Programming</h3>
+                <p class="timeline-date">2022-2024 | Mengo Institute</p>
+                <ul>
+                    <li>Specialization: Full-Stack Development</li>
+                    <li>Capstone Project: E-commerce Platform</li>
+                    <li>Graduated with Honors</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Academic Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>AI-Powered Tutor System</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">Flask</span>
+                </div>
+                <p>Developed an adaptive learning system using NLP techniques to personalize educational content.
+                    Implemented recommendation algorithms and progress tracking dashboard.</p>
+                <div class="project-links">
+                    <a href="#">Live Demo</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Blockchain Voting System</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">Solidity</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                </div>
+                <p>Created a decentralized voting application with smart contracts for transparent election processes.
+                    Implemented voter authentication and real-time result tracking.</p>
+                <div class="project-links">
+                    <a href="#">Case Study</a>
+                    <a href="#">Documentation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interests">
+        <h2 class="section-title">Tech Interests</h2>
+        <div class="interests-grid">
+            <div class="interest-card">
+                <i class="fas fa-robot"></i>
+                <h3>AI/ML</h3>
+                <p>Exploring ethical AI applications and model optimization techniques</p>
+            </div>
+            <div class="interest-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Cybersecurity</h3>
+                <p>Passionate about secure coding practices and threat detection</p>
+            </div>
+            <div class="interest-card">
+                <i class="fas fa-database"></i>
+                <h3>Big Data</h3>
+                <p>Experienced in data pipeline creation and analysis</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</body>
+
+</html>
