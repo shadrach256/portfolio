@@ -9,98 +9,128 @@
 </head>
 <body class="bg-gray-50 font-inter">
     <header class="bg-blue-800 text-white p-4 shadow">
-        <div class="container mx-auto flex justify-between items-center">
+        <div class="container mx-auto">
             <h1 class="text-2xl font-bold font-libre">ORLANDO BOOKSTORE</h1>
-            <nav class="hidden md:block">
-                <a href="#books" class="mx-3 hover:text-blue-200">Books</a>
-                <a href="#categories" class="mx-3 hover:text-blue-200">Categories</a>
-                <a href="#contact" class="mx-3 hover:text-blue-200">Contact</a>
-            </nav>
         </div>
     </header>
 
     <main class="container mx-auto p-4">
-        <!-- Featured Books -->
-        <section id="books" class="my-8">
-            <h2 class="text-2xl font-bold mb-6 text-center font-libre">Featured Books</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg shadow overflow-hidden">
+        <!-- Category Navigation -->
+        <section class="my-8">
+            <h2 class="text-2xl font-bold mb-6 text-center font-libre">Browse Categories</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12">
+                <a href="#fiction" class="bg-white p-4 rounded-lg shadow text-center hover:bg-blue-50 transition">Fiction</a>
+                <a href="#nonfiction" class="bg-white p-4 rounded-lg shadow text-center hover:bg-blue-50 transition">Non-Fiction</a>
+                <a href="#scifi" class="bg-white p-4 rounded-lg shadow text-center hover:bg-blue-50 transition">Sci-Fi</a>
+                <a href="#romance" class="bg-white p-4 rounded-lg shadow text-center hover:bg-blue-50 transition">Romance</a>
+                <a href="#mystery" class="bg-white p-4 rounded-lg shadow text-center hover:bg-blue-50 transition">Mystery</a>
+                <a href="#biography" class="bg-white p-4 rounded-lg shadow text-center hover:bg-blue-50 transition">Biography</a>
+                <a href="#history" class="bg-white p-4 rounded-lg shadow text-center hover:bg-blue-50 transition">History</a>
+                <a href="#fantasy" class="bg-white p-4 rounded-lg shadow text-center hover:bg-blue-50 transition">Fantasy</a>
+            </div>
+        </section>
+
+        <!-- Fiction -->
+        <section id="fiction" class="my-12">
+            <h3 class="text-xl font-bold mb-6 font-libre border-b pb-2">Fiction</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+                    <img src="https://m.media-amazon.com/images/I/71FxgtFKcQL._AC_UF1000,1000_QL80_.jpg" alt="To Kill a Mockingbird" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="font-semibold">To Kill a Mockingbird</h4>
+                        <p class="text-gray-600 text-sm">Harper Lee</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
                     <img src="https://m.media-amazon.com/images/I/71Q1tPupKjL._AC_UF1000,1000_QL80_.jpg" alt="Pride and Prejudice" class="w-full h-48 object-cover">
                     <div class="p-4">
-                        <h3 class="font-bold text-lg">PRIDE AND PREJUDICE</h3>
+                        <h4 class="font-semibold">Pride and Prejudice</h4>
                         <p class="text-gray-600 text-sm">Jane Austen</p>
-                        <button class="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded transition">
-                            Add to Cart - $12.99
-                        </button>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow overflow-hidden">
+                <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
                     <img src="https://m.media-amazon.com/images/I/71kxa1-0mfL._AC_UF1000,1000_QL80_.jpg" alt="1984" class="w-full h-48 object-cover">
                     <div class="p-4">
-                        <h3 class="font-bold text-lg">1984</h3>
+                        <h4 class="font-semibold">1984</h4>
                         <p class="text-gray-600 text-sm">George Orwell</p>
-                        <button class="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded transition">
-                            Add to Cart - $10.99
-                        </button>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow overflow-hidden">
-                    <img src="https://m.media-amazon.com/images/I/71jLBXtWJWL._AC_UF1000,1000_QL80_.jpg" alt="Lord of the Rings" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg">LORD OF THE RINGS</h3>
-                        <p class="text-gray-600 text-sm">J.R.R. Tolkien</p>
-                        <button class="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded transition">
-                            Add to Cart - $15.99
-                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Categories -->
-        <section id="categories" class="my-8 bg-white p-6 rounded-lg shadow">
-            <h2 class="text-2xl font-bold mb-6 text-center font-libre">Book Categories</h2>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                <a href="#" class="p-4 border rounded-lg hover:bg-blue-50 transition text-center">Fiction</a>
-                <a href="#" class="p-4 border rounded-lg hover:bg-blue-50 transition text-center">Non-Fiction</a>
-                <a href="#" class="p-4 border rounded-lg hover:bg-blue-50 transition text-center">Science Fiction</a>
-                <a href="#" class="p-4 border rounded-lg hover:bg-blue-50 transition text-center">Romance</a>
-                <a href="#" class="p-4 border rounded-lg hover:bg-blue-50 transition text-center">Mystery</a>
-                <a href="#" class="p-4 border rounded-lg hover:bg-blue-50 transition text-center">Biography</a>
-                <a href="#" class="p-4 border rounded-lg hover:bg-blue-50 transition text-center">History</a>
-                <a href="#" class="p-4 border rounded-lg hover:bg-blue-50 transition text-center">Fantasy</a>
+        <!-- Non-Fiction -->
+        <section id="nonfiction" class="my-12">
+            <h3 class="text-xl font-bold mb-6 font-libre border-b pb-2">Non-Fiction</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+                    <img src="https://m.media-amazon.com/images/I/713jIoMO3UL._AC_UF1000,1000_QL80_.jpg" alt="Sapiens" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="font-semibold">Sapiens</h4>
+                        <p class="text-gray-600 text-sm">Yuval Noah Harari</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+                    <img src="https://m.media-amazon.com/images/I/61I5s7SPfVL._AC_UF1000,1000_QL80_.jpg" alt="Anne Frank's Diary" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="font-semibold">Anne Frank's Diary</h4>
+                        <p class="text-gray-600 text-sm">Anne Frank</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+                    <img src="https://m.media-amazon.com/images/I/91j0l7XwuAL._AC_UF1000,1000_QL80_.jpg" alt="Cosmos" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="font-semibold">Cosmos</h4>
+                        <p class="text-gray-600 text-sm">Carl Sagan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sci-Fi -->
+        <section id="scifi" class="my-12">
+            <h3 class="text-xl font-bold mb-6 font-libre border-b pb-2">Science Fiction</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+                    <img src="https://m.media-amazon.com/images/I/81ym3QUd3KL._AC_UF1000,1000_QL80_.jpg" alt="Dune" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="font-semibold">Dune</h4>
+                        <p class="text-gray-600 text-sm">Frank Herbert</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+                    <img src="https://m.media-amazon.com/images/I/81zq7CvjYlL._AC_UF1000,1000_QL80_.jpg" alt="The Left Hand of Darkness" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="font-semibold">The Left Hand of Darkness</h4>
+                        <p class="text-gray-600 text-sm">Ursula K. Le Guin</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+                    <img src="https://m.media-amazon.com/images/I/91SsCj6lHZL._AC_UF1000,1000_QL80_.jpg" alt="Foundation" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="font-semibold">Foundation</h4>
+                        <p class="text-gray-600 text-sm">Isaac Asimov</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Contact -->
-        <section id="contact" class="my-8 bg-white p-6 rounded-lg shadow">
+        <section class="my-8 bg-white p-6 rounded-lg shadow max-w-2xl mx-auto">
             <h2 class="text-2xl font-bold mb-6 text-center font-libre">Contact Us</h2>
-            <div class="max-w-md mx-auto">
-                <form class="space-y-4">
-                    <input type="text" placeholder="Your Name" class="w-full p-2 border rounded">
-                    <input type="email" placeholder="Your Email" class="w-full p-2 border rounded">
-                    <textarea placeholder="Your Message" class="w-full p-2 border rounded h-32"></textarea>
-                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded transition">
-                        Send Message
-                    </button>
-                </form>
-                <div class="mt-8 text-center">
-                    <p class="font-semibold">ORLANDO BOOKSTORE</p>
-                    <p>123 Book Street, Orlando</p>
-                    <p>Email: info@orlandobookstore.com</p>
-                    <p>Phone: (555) 123-4567</p>
-                </div>
-            </div>
+            <form class="space-y-4">
+                <input type="text" placeholder="Your Name" class="w-full p-2 border rounded">
+                <input type="email" placeholder="Your Email" class="w-full p-2 border rounded">
+                <textarea placeholder="Your Message" class="w-full p-2 border rounded h-32"></textarea>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded transition">
+                    Send Message
+                </button>
+            </form>
         </section>
     </main>
 
     <footer class="bg-gray-800 text-white p-6 mt-8">
         <div class="container mx-auto text-center">
             <p>© 2024 ORLANDO BOOKSTORE. All rights reserved.</p>
-            <div class="mt-4">
-                <a href="#" class="mx-2 hover:text-blue-300">Privacy Policy</a>
-                <a href="#" class="mx-2 hover:text-blue-300">Terms of Service</a>
-            </div>
         </div>
     </footer>
 </body>
